@@ -5,30 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">        
 <title>Fish Cinema</title>               
 <style>
-     background:#16120c;
-     color:#eu8dcc8;
+     body {
+          background: #16120c
+          color:#e8dcc8;
+          font-family: Geprgia, serif;
+          padding: 24px;
+     }
+     .movie-card {
+          max-width: 220px;
+          border: 1px solid #8a7040;
+          padding: 12px
+     }
+     .movie-card img {
+          display: block;
+          width: 100%;
+     }
+          
 </style>
-          </head>
+</head>
+<body>
+     <header>
+          <h1>FishCinema</h1>
+          <p>Без рекламы. Без казино. Только кино</p>
+     </header>
+<main>
+     <div class="movie-card">
+          <a href="Fight_club.html">
+               <img src="https://kinomax.ru/filmdata/8068" alt="Постер фильма">
+               </a>
+          <h2>Бойцовский клуб</h2>
+          <p>1999 • США</p>
+</div>
+</main>
 <script>
      const movies = [
           {
-               title: "Бойцовский клуб",
-               fille:"fight_club.html",
+               title: "Бойцовский клуб"
+               file: "Fight_club.html"
                year: 1999,
-               country:"США",
-               img:"типо сылка на постер",
+               country: "Сша"
+               img: "https://kinomax.ru/filmdata/8068"
 </script>
-          <body>
-    <div>
-    <a href="Fight_club.html">
-         <h1>Fish Cinema</h1>
-     <p>Без рекламы. Без казино. Только кино.</p>
-     <img src="https://kinomax.ru/filmdata/8068" alt="Постер фильма" width="170">
-   </a>
-         <h2>Бойцовский клуб</h2>
-         
-         <p>1999 • США</p>
-    </div>
 </body>
 </html>
           
