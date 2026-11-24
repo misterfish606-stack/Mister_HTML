@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">        
 <title>Fish Cinema</title>               
 <style>
-  * {
+  - {
        box-sizing: border-box;
        margin: 0;
        padding: 0;
@@ -46,7 +46,7 @@
           padding: 10px;
           transition: transform 0.25s, border-color 0.25s; 
      }
-     .movir-card: hover {
+     .movie-card:hover {
           transform: translateY(-6px);
           border-color: #c9a84c;
      }
@@ -78,11 +78,11 @@
                     <p>Без рекламы. Без казино. Только кино.</p>
                </header>
                <main>
-                    <Сюда тип джава скрипт вставит все карточки>
-                         <div class="movies-grib" id="catalog"></div>
+                    <!Сюда тип джава скрипт вставит все карточки-->
+                         <div class="movies-grid" id="catalog"></div>
                </main>
                <script>
-                    <!//база даных фильма-->
+                    //база даных фильма
                     const movies= [
                          {
                          title:"Бойцовский клуб",
@@ -113,23 +113,23 @@
                          img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSocd8I-_SY3Dw1UwcjJwwtYNgfrAfLKO9AvdKcBp_IHQ&s=10"
                          }
                        ]; 
-                    <!//функция отрисовок карточек-->
-                    fynction render(list) {
+                    //функция отрисовок карточек
+                    function render(list) {
                     const catalog = document.getElementById("catalog");
                          catalog.innerHTML = ""; 
                          list.forEach(movie => {
-                              catalog.innerHTML += '
+                              catalog.innerHTML += `
                                    <div class="movie-card">
                                    <a href= "${movie.file}">
-                                   <img src="${movie.img}" alt="${movir.title}">
-                                   <h2>$:{movie.title}</h2>
+                                   <img src="${movie.img}" alt="${movie.title}">
+                                   <h2>${movie.title}</h2>
                                       <p>${movie.year} • ${movie.country}</p>
                               </a>
                               </div>
                          ';
                     });
                     }
-                    <!// 3 запускаем отрисовку при откритые страницы-->     
+                    // 3 запускаем отрисовку при откритые страницы 
           render(movies);
           </script>      
                          
