@@ -39,12 +39,100 @@
           max-width: 1100px;
           margin: 0 auto;
      }
-          
-     
-          
-          
-     
-               
+          /* одна карточка */
+     .movie-card {
+          background: #1e1810;
+          border: 1px solid #8a7040;
+          padding: 10px;
+          transition: transform 0.25s, border-color 0.25s; 
+     }
+     .movir-caed: hover {
+          transform: translateY(-6px);
+          border-color: #c9a84c;
+     }
+     .movie-card a {
+          text-decoration: none;
+          color: inherit;
+     }
+     .movie-card img {
+          width: 100%;
+          aspect-ratio: 2 / 3;
+          object-fit: cover;
+          display: block;
+          margin-bottom: 10px;
+     }
+     .movie-card h2 {
+          font-size: 1rem;
+          color: #e8dcc8;
+          margin-bottom: 4px;
+     }
+     .movie-card p {
+          font-size: 0.85rem;
+          color: c4aa88;
+     }
+     </style>
+              </head> 
+          <body>
+               <header>
+                    <h1>Fish Cinema</h1>
+                    <p>Без рекламы. Без казино. Только кино.</p>
+               </header>
+               <main>
+                    <Сюда тип джава скрипт вставит все карточки>
+                         <div class="movies-grib" id="catalog"></div>
+               </main>
+               <script>
+                    //база даных фильма
+                    const movies= [
+                         {
+                         title:"Бойцовский клуб"
+                         file:"Fight_club.html",
+                         year:1999,
+                         country:"США",
+                         img:
+                         }, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzfrciLeLb5GpByVO6B2DLxvwKm3TB9Mn12JOEsr5qRCLYyzZkJdnFJ11z8HPwjtvgh-fBfBCwF2-XRV0YR0At88KUMBcrDn5ft2TlS-Np&s=10"
+                {
+                         title:"Матрица",
+                         file:"Matrix.html",
+                         year:1999,
+                         country:"США",
+                         img:"https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/4774061/cf1970bc-3f08-4e0e-a095-2fb57c3aa7c6/220x330"
+                         },
+                {
+                         title:"Криминальное чтиво",
+                         file:"Pulp_fiction.html",
+                         year:1994,
+                         country:"США",
+                         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRinhyMrAnkW7rk4C_9ydLHMHhKIZtnWWVMQYt5jxeF8qZmdtb_aVLrRuAZ3VD9qL9Vcba_HKr-m6d1KFR-j8-aTOGm-7UY9Bo7j6Mk9Q&s=10"
+                         },
+                {
+                         title:"Джентльмены",
+                         file:"Gentlemen.html",
+                         year:2019,
+                         country:"Великобритания",
+                         img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSocd8I-_SY3Dw1UwcjJwwtYNgfrAfLKO9AvdKcBp_IHQ&s=10"
+                         }
+                       ]; 
+                    //функция отрисовок карточек
+                    fynction render(list) {
+                    const catalog = document.getElementById("catalog");
+                         catalog.innerHTML = ""; 
+                         list.forEach(movie => {
+                              catalog.innerHTML += '
+                                   <div class="movie-card">
+                                   <a href= "${movie.file}">
+                                   <img src="${movie.img}" alt="${movir.title}">
+                                   <h2>$:{movie.title}</h2>
+                                      <p>${movie.year} • ${movie.country}</p>
+                              </a>
+                              </div>
+                         ';
+                    });
+                    }
+                    // 3 запускаем отрисовку при откритые страницы     
+          render(movies);
+          </script>      
+                         
 </body>
 </html>
           
