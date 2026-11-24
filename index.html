@@ -10,7 +10,7 @@
        margin: 0;
        padding: 0;
   }
-     body
+     body {
      background: #16120c;
      color: #e8dcc8;
      font-family: Georgia, serif;
@@ -19,8 +19,8 @@
      header {
           text-align: center;
           margin-bottom: 36px;
-          padding-bottomm: 20px;
-          border bottom: 1px solid #8a7040;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #8a7040;
      }
      header h1 {
           color: #c9a84c;
@@ -32,9 +32,9 @@
           font-style: italic;
      }
      /* сетка карточек */
-     .movies-grib {
-          display: grib;
-          grib-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+     .movies-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
           gap: 24px;
           max-width: 1100px;
           margin: 0 auto;
@@ -46,7 +46,7 @@
           padding: 10px;
           transition: transform 0.25s, border-color 0.25s; 
      }
-     .movir-caed: hover {
+     .movir-card: hover {
           transform: translateY(-6px);
           border-color: #c9a84c;
      }
@@ -68,7 +68,7 @@
      }
      .movie-card p {
           font-size: 0.85rem;
-          color: c4aa88;
+          color: #c4aa88;
      }
      </style>
               </head> 
@@ -82,15 +82,15 @@
                          <div class="movies-grib" id="catalog"></div>
                </main>
                <script>
-                    //база даных фильма
+                    <!//база даных фильма-->
                     const movies= [
                          {
-                         title:"Бойцовский клуб"
+                         title:"Бойцовский клуб",
                          file:"Fight_club.html",
                          year:1999,
                          country:"США",
-                         img:
-                         }, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzfrciLeLb5GpByVO6B2DLxvwKm3TB9Mn12JOEsr5qRCLYyzZkJdnFJ11z8HPwjtvgh-fBfBCwF2-XRV0YR0At88KUMBcrDn5ft2TlS-Np&s=10"
+                         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzfrciLeLb5GpByVO6B2DLxvwKm3TB9Mn12JOEsr5qRCLYyzZkJdnFJ11z8HPwjtvgh-fBfBCwF2-XRV0YR0At88KUMBcrDn5ft2TlS-Np&s=10"
+                         },
                 {
                          title:"Матрица",
                          file:"Matrix.html",
@@ -113,7 +113,7 @@
                          img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSocd8I-_SY3Dw1UwcjJwwtYNgfrAfLKO9AvdKcBp_IHQ&s=10"
                          }
                        ]; 
-                    //функция отрисовок карточек
+                    <!//функция отрисовок карточек-->
                     fynction render(list) {
                     const catalog = document.getElementById("catalog");
                          catalog.innerHTML = ""; 
@@ -129,7 +129,7 @@
                          ';
                     });
                     }
-                    // 3 запускаем отрисовку при откритые страницы     
+                    <!// 3 запускаем отрисовку при откритые страницы-->     
           render(movies);
           </script>      
                          
